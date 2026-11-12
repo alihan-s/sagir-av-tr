@@ -1,6 +1,6 @@
 const form = document.querySelector('[data-contact-form]');
 if (form) {
-  const lang = ['tr', 'en', 'de', 'ru', 'sv', 'nb', 'da'].includes(document.documentElement.lang) ? document.documentElement.lang : 'tr';
+  const lang = ['tr', 'en', 'de', 'ru', 'sv', 'nb', 'da', 'nl'].includes(document.documentElement.lang) ? document.documentElement.lang : 'tr';
   const copy = {
     tr: {
       busy: 'Gönderiliyor…', send: 'Mesajı gönder',
@@ -50,6 +50,14 @@ if (form) {
       success: 'Meldingen din er mottatt av e-posttjenesten.',
       invalid: 'Kontroller feltene; meldingen må inneholde minst 10 tegn.'
     },
+    nl: {
+      busy: 'Verzenden…', send: 'Bericht verzenden',
+      local: 'Verzenden is niet ingeschakeld in deze lokale versie. Uw bericht is niet verzonden. Gebruik de e-maillink.',
+      unavailable: 'E-mailbezorging is nog niet ingeschakeld. Uw bericht is niet verzonden; stuur ons rechtstreeks een e-mail.',
+      fail: 'Uw bericht kon niet worden verzonden. Probeer het opnieuw of stuur ons rechtstreeks een e-mail.',
+      success: 'Uw bericht is geaccepteerd door de e-maildienst.',
+      invalid: 'Controleer de velden; het bericht moet minstens 10 tekens bevatten.'
+    },
     da: {
       busy: 'Sender…', send: 'Send besked',
       local: 'Udsendelse af e-mails er ikke aktiveret i den lokale forhåndsvisning. Din besked er ikke sendt. Du kan bruge e-maillinket.',
@@ -65,7 +73,7 @@ if (form) {
   const local = ['127.0.0.1', 'localhost', '[::1]'].includes(location.hostname) || location.protocol === 'file:';
   button.disabled = false;
   if (local || draft) document.querySelector('[data-preview-mail]').hidden = false;
-  if (draft) button.textContent = {tr:'E-posta taslağı oluştur',en:'Create email draft',de:'E-Mail-Entwurf erstellen',ru:'Создать черновик письма',sv:'Skapa e-postutkast',nb:'Lag e-postutkast',da:'Opret e-mailudkast'}[lang];
+  if (draft) button.textContent = {tr:'E-posta taslağı oluştur',en:'Create email draft',de:'E-Mail-Entwurf erstellen',ru:'Создать черновик письма',sv:'Skapa e-postutkast',nb:'Lag e-postutkast',da:'Opret e-mailudkast',nl:'E-mailconcept maken'}[lang];
   let pending = false;
   let submissionId = crypto.randomUUID();
   form.addEventListener('input', () => { status.textContent = ''; });
@@ -74,7 +82,7 @@ if (form) {
     if (pending) return;
     if (!form.reportValidity()) return;
     const fields = new FormData(form);
-    const data = Object.fromEntries(['name', 'email', 'subject', 'message', 'website'].map(key => [key, String(fields.get(key) || '').trim()]));
+    const data = Object.fromEntries(['name', 'email', 'subject', 'message', 'website', 'matter', 'discoverySource'].map(key => [key, String(fields.get(key) || '').trim()]));
     if (data.name.length < 2 || data.message.length < 10) {
       status.textContent = copy.invalid;
       return;
@@ -83,7 +91,7 @@ if (form) {
       const subject = data.subject || 'Sağır Hukuk Bürosu — iletişim';
       const body = `${data.name}\n${data.email}\n\n${data.message}`;
       location.href = `mailto:alihansagir@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      status.textContent = {tr:'Taslak e-posta uygulamanızda açılır. Gönderimi oradan tamamlayın; bu site mesajınızı göndermedi.',en:'A draft opens in your email application. Send it from there; this site has not sent your message.',de:'Der Entwurf wird im E-Mail-Programm geöffnet. Bitte senden Sie ihn dort ab; die Website hat keine Nachricht versendet.',ru:'Черновик открывается в почтовом приложении. Отправьте его там; сайт не отправлял сообщение.',sv:'Utkastet öppnas i ditt e-postprogram. Skicka det därifrån; webbplatsen har inte skickat ditt meddelande.',nb:'Utkastet åpnes i e-postprogrammet ditt. Send det derfra; nettstedet har ikke sendt meldingen din.',da:'Udkastet åbnes i dit e-mailprogram. Send det derfra; hjemmesiden har ikke sendt din besked.'}[lang];
+      status.textContent = {tr:'Taslak e-posta uygulamanızda açılır. Gönderimi oradan tamamlayın; bu site mesajınızı göndermedi.',en:'A draft opens in your email application. Send it from there; this site has not sent your message.',de:'Der Entwurf wird im E-Mail-Programm geöffnet. Bitte senden Sie ihn dort ab; die Website hat keine Nachricht versendet.',ru:'Черновик открывается в почтовом приложении. Отправьте его там; сайт не отправлял сообщение.',sv:'Utkastet öppnas i ditt e-postprogram. Skicka det därifrån; webbplatsen har inte skickat ditt meddelande.',nb:'Utkastet åpnes i e-postprogrammet ditt. Send det derfra; nettstedet har ikke sendt meldingen din.',da:'Udkastet åbnes i dit e-mailprogram. Send det derfra; hjemmesiden har ikke sendt din besked.',nl:'Een concept opent in uw e-mailprogramma. Verstuur het daar; deze website heeft uw bericht niet verzonden.'}[lang];
       return;
     }
     if (local) { status.textContent = copy.local; return; }
@@ -95,7 +103,7 @@ if (form) {
       const response = await fetch(form.getAttribute('action') || '/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, consent: fields.get('consent') === 'on', lang, submissionId }),
+        body: JSON.stringify({ ...data, consent: fields.get('consent') === 'on', lang, submissionId, measurement: window.SagirMeasurement?.context() || null }),
         signal: AbortSignal.timeout(15000)
       });
       const result = await response.json().catch(() => ({}));
@@ -103,6 +111,7 @@ if (form) {
         status.textContent = result.code === 'NOT_CONFIGURED' ? copy.unavailable : copy.fail;
       } else {
         status.textContent = copy.success;
+        document.dispatchEvent(new CustomEvent('sagir:contact-accepted', { detail: { matter: data.matter } }));
         form.reset();
         submissionId = crypto.randomUUID();
       }
