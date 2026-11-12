@@ -38,6 +38,9 @@
   const panel = document.querySelector('[data-analytics-panel]');
   const settings = document.querySelector('[data-analytics-settings]');
   let panelOpener = null;
+  function updateSettings() {
+    if (settings) settings.hidden = consent === 'granted' && !config.is_cookie_policy;
+  }
 
   function googleEvent(name, extra = {}) {
     if (!gaStarted || consent !== 'granted' || privacySignal) return;
@@ -83,7 +86,11 @@
     consent = privacySignal ? 'denied' : value;
     try { localStorage.setItem(preferenceKey, JSON.stringify({ choice: consent, expires: Date.now() + lifetime })); } catch { /* Keep the choice in memory. */ }
     if (panel) panel.hidden = true;
-    if (panelOpener) panelOpener.focus();
+    updateSettings();
+    if (panelOpener) {
+      if (!settings.hidden) panelOpener.focus();
+      else document.querySelector('[data-cookie-policy-link]')?.focus({ preventScroll: true });
+    }
     if (consent === 'granted') startGoogle();
     else {
       if (gaId) window['ga-disable-' + gaId] = true;
@@ -93,7 +100,7 @@
     }
   }
   if (gaId && settings && panel) {
-    settings.hidden = false;
+    updateSettings();
     settings.addEventListener('click', () => { panelOpener = settings; panel.hidden = false; panel.querySelector('[data-analytics-deny]').focus(); });
     panel.querySelector('[data-analytics-allow]').disabled = privacySignal;
     panel.querySelector('[data-analytics-allow]').addEventListener('click', () => choose('granted'));
