@@ -51,14 +51,18 @@
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
     window.gtag('consent', 'update', { analytics_storage: 'granted' });
-    window.gtag('js', new Date());
     let referrer = '';
     try { if (document.referrer) referrer = new URL(document.referrer).origin; } catch { /* No raw referrer. */ }
-    window.gtag('config', gaId, {
+    const googleConfig = {
       send_page_view: false, allow_google_signals: false, allow_ad_personalization_signals: false,
       page_location: location.origin + location.pathname, page_referrer: referrer, cookie_flags: 'SameSite=Lax;Secure',
       cookie_expires: 180 * 24 * 60 * 60, cookie_update: false
-    });
+    };
+    // Set these globally before initialization as well as on the destination. The real
+    // Google tag can otherwise emit an automatic page_view and use its default cookie TTL.
+    window.gtag('set', googleConfig);
+    window.gtag('js', new Date());
+    window.gtag('config', gaId, googleConfig);
     googleEvent('page_view', { page_location: location.origin + location.pathname, page_referrer: referrer });
     const script = document.createElement('script');
     script.async = true;
