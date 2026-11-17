@@ -85,3 +85,4 @@ footer{background:#e9eae4;border-top:1px solid #cdd0c7;padding-top:40px}.footer-
 .menu-button[aria-expanded=true] .menu-icon::before{transform:translateY(5px) rotate(45deg)}
 .menu-button[aria-expanded=true] .menu-icon::after{transform:translateY(-5px) rotate(-45deg)}
 @media (prefers-reduced-motion:reduce){.menu-icon,.menu-icon::before,.menu-icon::after{transition:none}}
+.home-summary{padding-block:8px 72px;max-width:760px}.home-summary h2{margin-top:36px;margin-bottom:12px;font-size:32px}
