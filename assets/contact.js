@@ -88,7 +88,7 @@ if (form) {
       return;
     }
     if (draft) {
-      const subject = data.subject || 'Sağır Hukuk Bürosu — iletişim';
+      const subject = data.subject || 'Sağır Hukuk Bürosu - iletişim';
       const body = `${data.name}\n${data.email}\n\n${data.message}`;
       location.href = `mailto:alihansagir@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       status.textContent = {tr:'Taslak e-posta uygulamanızda açılır. Gönderimi oradan tamamlayın; bu site mesajınızı göndermedi.',en:'A draft opens in your email application. Send it from there; this site has not sent your message.',de:'Der Entwurf wird im E-Mail-Programm geöffnet. Bitte senden Sie ihn dort ab; die Website hat keine Nachricht versendet.',ru:'Черновик открывается в почтовом приложении. Отправьте его там; сайт не отправлял сообщение.',sv:'Utkastet öppnas i ditt e-postprogram. Skicka det därifrån; webbplatsen har inte skickat ditt meddelande.',nb:'Utkastet åpnes i e-postprogrammet ditt. Send det derfra; nettstedet har ikke sendt meldingen din.',da:'Udkastet åbnes i dit e-mailprogram. Send det derfra; hjemmesiden har ikke sendt din besked.',nl:'Een concept opent in uw e-mailprogramma. Verstuur het daar; deze website heeft uw bericht niet verzonden.'}[lang];
