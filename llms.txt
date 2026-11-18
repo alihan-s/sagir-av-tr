@@ -1,6 +1,6 @@
 # Sağır Hukuk Bürosu (Sagir Attorneys at Law)
 
-> Law office in Antalya, Türkiye, founded in 1988. The site publishes legal information under Turkish law in Turkish, English, German, Russian, Swedish, Norwegian, Danish and Dutch. Articles are general information, not legal advice on a particular matter.
+> Law office in Antalya, Türkiye, founded in 1988. The site publishes legal information under Turkish law in Turkish, English, German, Russian, Swedish, Norwegian, Danish, Dutch, Arabic and Persian. Articles are general information, not legal advice on a particular matter.
 
 ## Contact
 
@@ -107,6 +107,16 @@
 - [Buitenlandse bestuurders in een Turkse vennootschap: vertegenwoordigingsbevoegdheid, werk- en verblijfsvergunning](https://sagir.av.tr/nl/blog/buitenlandse-bestuurders-turkse-vennootschap.html): Een buitenlander die in het buitenland woont, kan bestuurder zijn van een Turkse besloten vennootschap of lid van de raad van bestuur van een Turkse naamloze vennootschap; een woonplaatsvereiste bestaat niet. De moeilijkere vragen zijn wie namens de vennootschap mag tekenen, hoe handtekeningen die in het buitenland worden gezet worden bekrachtigd, en of een bestuurder die in Turkije werkt een werkvergunning nodig heeft.
 - [Een Turkse vennootschap met buitenlandse aandeelhouder: de jaarlijkse juridische verplichtingen](https://sagir.av.tr/nl/blog/jaarlijkse-verplichtingen-turkse-dochtervennootschap.html): Een Turkse dochtervennootschap heeft ook na de oprichting elk jaar vennootschapsrechtelijke verplichtingen: een jaarlijkse algemene vergadering binnen drie maanden na afloop van het boekjaar, wettelijke boeken, inschrijvingen in het handelsregister binnen 15 dagen, elektronische kennisgeving via het Nationale Elektronische Kennisgevingssysteem (UETS), een afhankelijkheidsverslag voor dochtervennootschappen en, bij buitenlandse eigenaren, meldingen aan het Ministerie van Industrie en Technologie. Deze gids zet ze in heldere taal op een rij. Belastingaangiften vallen buiten het bestek.
 
+## Articles: العربية (ar)
+
+- [إقامة المستثمر في تركيا أم الإقامة العقارية أم الجنسية عن طريق الاستثمار: كيف تختلف المسارات](https://sagir.av.tr/ar/blog/iqamat-al-mustathmir-am-al-iqama-al-aqariya-am-al-jinsiya.html): توجد في تركيا الآن ثلاثة مسارات منفصلة مرتبطة بالاستثمار: تصريح إقامة المستثمر الجديد بموجب المرسوم رقم 11994، وتصريح الإقامة قصير الأمد القائم على العقار، والجنسية عن طريق الاستثمار. يقارن هذا الدليل بينها من حيث الأساس القانوني والحدود الدنيا والمدة وشمول الأسرة والحق في العمل والصلة بالجنسية، ويبين ما لا يزال غير واضح.
+- [إقامة المستثمر في تركيا (2026): 150,000 دولار لثلاث سنوات و200,000 دولار لخمس سنوات](https://sagir.av.tr/ar/blog/iqamat-al-mustathmir-fi-turkiya.html): نشرت تركيا في 18 نوفمبر 2026 مرسومًا جديدًا بشأن تصاريح الإقامة للمستثمرين الأجانب الذين لا يعملون في تركيا. يشرح هذا الدليل الفئتين، والاستثمارات الأربعة المؤهلة، ومدة الاحتفاظ بالاستثمار، ومن يشملهم التصريح، وما لا يمنحه، وما لا يزال غير معروف إلى أن تنشر وزارة الداخلية قواعدها التنفيذية.
+
+## Articles: فارسی (fa)
+
+- [اقامت سرمایه‌گذاری ترکیه، اقامت ملکی یا شهروندی از طریق سرمایه‌گذاری: تفاوت این مسیرها](https://sagir.av.tr/fa/blog/eghamat-sarmayegozari-ya-eghamat-melki-ya-shahrvandi-torkiye.html): ترکیه اکنون سه مسیر جداگانه مرتبط با سرمایه‌گذاری دارد: اقامت سرمایه‌گذاری تازه بر پایه تصمیم شماره 11994، اقامت کوتاه‌مدت مبتنی بر ملک، و شهروندی از طریق سرمایه‌گذاری. این راهنما مبنای قانونی، حد نصاب‌ها، مدت، پوشش خانواده، حق کار و ارتباط با شهروندی را مقایسه می‌کند و می‌گوید چه چیزی هنوز روشن نیست.
+- [اقامت سرمایه‌گذاری ترکیه (2026): 150,000 دلار برای سه سال، 200,000 دلار برای پنج سال](https://sagir.av.tr/fa/blog/eghamat-sarmayegozari-torkiye.html): در 18 نوامبر 2026 ترکیه مصوبه‌ای تازه درباره اقامت سرمایه‌گذاران خارجی که در ترکیه کار نمی‌کنند منتشر کرد. این راهنما دو سطح سرمایه‌گذاری، چهار نوع سرمایه‌گذاری مجاز، مدت نگهداری، افراد تحت پوشش، آنچه این اقامت به شما نمی‌دهد و آنچه تا انتشار مقررات وزارت کشور هنوز روشن نیست را توضیح می‌دهد.
+
 ## Site
 
 - [Sitemap](https://sagir.av.tr/sitemap.xml)
@@ -118,3 +128,5 @@
 - [Home page: Norsk](https://sagir.av.tr/no/)
 - [Home page: Dansk](https://sagir.av.tr/da/)
 - [Home page: Nederlands](https://sagir.av.tr/nl/)
+- [Home page: العربية](https://sagir.av.tr/ar/)
+- [Home page: فارسی](https://sagir.av.tr/fa/)
