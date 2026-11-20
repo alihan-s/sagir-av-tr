@@ -16,7 +16,7 @@
 ## Services for foreign clients (English)
 
 - [Inheritance Lawyer in Antalya, Turkey for Foreign Heirs](https://sagir.av.tr/en/inheritance-and-property-lawyer-antalya.html): Turkish inheritance law for foreign heirs and owners: certificate of inheritance, tax return, title deed transfer and sale of property in Antalya and Alanya, handled from abroad in English.
-- [Company Formation and Business Lawyer in Antalya](https://sagir.av.tr/en/company-formation-lawyer-antalya.html): Business and corporate lawyers in Antalya for foreign investors: company formation in Türkiye, foreign managers, group contracts and startups. You can write in English.
+- [Business and Corporate Lawyer in Antalya: Company Formation](https://sagir.av.tr/en/company-formation-lawyer-antalya.html): Business and corporate lawyers in Antalya for company formation in Türkiye: limited or joint stock company, registration steps, foreign owners. Write in English.
 - [Property Lawyer in Antalya: Real Estate Purchase Checks](https://sagir.av.tr/en/property-purchase-lawyer-antalya.html): Real estate lawyer for foreign buyers in Antalya, Kaş, Kalkan and Alanya: title deed and contract checks, powers of attorney and land registry transfers. You can write in English.
 - [Startup lawyer in Antalya: incorporation, IP and investment](https://sagir.av.tr/en/startup-lawyer-antalya.html): Legal assistance for startups, founders and investors in Antalya: incorporation, founders' agreements, software IP, SAFE and investment rounds. You can write in English.
 
@@ -72,7 +72,7 @@
 - [Yazılım ve yapay zekâ projelerinde açık kaynak lisans uyumu ve yatırım incelemesi](https://sagir.av.tr/blog/yazilim-projelerinde-acik-kaynak-lisans-uyumu.html): Esnek (MIT, Apache 2.0) ve yayılımcı/copyleft (GPL, AGPLv3) lisansların SaaS ve model dağıtımına etkisi ile yatırım sözleşmelerindeki fikrî mülkiyet beyanları.
 - [Avrupa Birliği Yapay Zekâ Tüzüğü’nün (AI Act) sınır ötesi kapsamı: AB pazarına yazılım sunan Türkiye merkezli girişimler](https://sagir.av.tr/blog/ab-yapay-zeka-tuzugu-turkiye-merkezli-girisimler.html): 2024/1689 sayılı AB Tüzüğü’nün üçüncü ülke sağlayıcılarına uygulanma koşulları, çıktıların AB içinde kullanılması ölçütü, kademeli yürürlük takvimi ve yetkili temsilci yükümlülüğü.
 - [Kurucular sözleşmesi: yatırım öncesinde hangi konular yazılı olmalı?](https://sagir.av.tr/blog/kurucular-sozlesmesi.html): Pay oranlarının yanında kurucu katkıları, karar mekanizması, fikrî hakların devri ve ortaklıktan ayrılma koşullarının şirket türüne göre kurgulanması.
-- [Kentsel dönüşümde sözleşme imzalamadan önce neler incelenmeli?](https://sagir.av.tr/blog/kentsel-donusum-sozlesmesi.html): Riskli yapı süreci, malik kararları, bağımsız bölüm paylaşımı ve yüklenici sözleşmesinin birbirinden farklı yönleri.
+- [Kentsel dönüşüm sözleşmesinde dikkat edilecek hususlar](https://sagir.av.tr/blog/kentsel-donusum-sozlesmesi.html): Kentsel dönüşüm sözleşmesinde vekâletname sınırı, arsa payının kademeli devri, cezai şart, salt çoğunluk kararı ve yüklenicinin işi bitirmemesi hâli.
 - [İş uyuşmazlıklarında arabuluculuk görüşmesine nasıl hazırlanılır?](https://sagir.av.tr/blog/is-uyusmazliklarinda-arabuluculuk.html): Başvuru kapsamı, çalışma belgeleri, talep kalemleri ve anlaşma metninde dikkat edilecek noktalar.
 
 ## Articles: Deutsch (de)
